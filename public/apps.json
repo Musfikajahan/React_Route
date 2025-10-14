@@ -1,0 +1,506 @@
+[
+  {
+    "id": 1,
+    "image": "https://picsum.photos/seed/1/400/300",
+    "title": "Elegant Sofa",
+    "companyName": "Home Comforts Inc.",
+    "description": "A comfortable sofa with a modern design and premium fabric cushions.",
+    "size": 3,
+    "reviews": 120,
+    "ratingAvg": 4.3,
+    "downloads": 2300,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 8 },
+      { "name": "3 star", "count": 12 },
+      { "name": "4 star", "count": 40 },
+      { "name": "5 star", "count": 55 }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://picsum.photos/seed/2/400/300",
+    "title": "Smart LED TV",
+    "companyName": "VisionTech",
+    "description": "A 55-inch 4K Smart LED TV with HDR and voice control.",
+    "size": 2,
+    "reviews": 310,
+    "ratingAvg": 4.6,
+    "downloads": 8700,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 90 },
+      { "name": "5 star", "count": 170 }
+    ]
+  },
+  {
+    "id": 3,
+    "image": "https://picsum.photos/seed/3/400/300",
+    "title": "Wireless Headphones",
+    "companyName": "AudioVibe",
+    "description": "Noise-cancelling Bluetooth headphones with 30 hours of battery life.",
+    "size": 1,
+    "reviews": 450,
+    "ratingAvg": 4.7,
+    "downloads": 15200,
+    "ratings": [
+      { "name": "1 star", "count": 15 },
+      { "name": "2 star", "count": 18 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 100 },
+      { "name": "5 star", "count": 287 }
+    ]
+  },
+  {
+    "id": 4,
+    "image": "https://picsum.photos/seed/4/400/300",
+    "title": "Gaming Laptop",
+    "companyName": "CyberZone",
+    "description": "High-performance laptop with RTX graphics and RGB keyboard.",
+    "size": 5,
+    "reviews": 220,
+    "ratingAvg": 4.5,
+    "downloads": 5300,
+    "ratings": [
+      { "name": "1 star", "count": 8 },
+      { "name": "2 star", "count": 12 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 70 },
+      { "name": "5 star", "count": 105 }
+    ]
+  },
+  {
+    "id": 5,
+    "image": "https://picsum.photos/seed/5/400/300",
+    "title": "Office Chair",
+    "companyName": "ErgoDesign",
+    "description": "Ergonomic office chair with lumbar support and breathable mesh.",
+    "size": 2,
+    "reviews": 310,
+    "ratingAvg": 4.4,
+    "downloads": 4800,
+    "ratings": [
+      { "name": "1 star", "count": 6 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 100 },
+      { "name": "5 star", "count": 159 }
+    ]
+  },
+  {
+    "id": 6,
+    "image": "https://picsum.photos/seed/6/400/300",
+    "title": "Smartphone X1",
+    "companyName": "NovaTech",
+    "description": "Flagship smartphone with AI camera and ultra-fast charging.",
+    "size": 1,
+    "reviews": 620,
+    "ratingAvg": 4.8,
+    "downloads": 25400,
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 100 },
+      { "name": "5 star", "count": 458 }
+    ]
+  },
+  {
+    "id": 7,
+    "image": "https://picsum.photos/seed/7/400/300",
+    "title": "Air Purifier",
+    "companyName": "PureBreeze",
+    "description": "Removes 99.97% of dust, smoke, and allergens from the air.",
+    "size": 2,
+    "reviews": 150,
+    "ratingAvg": 4.3,
+    "downloads": 2700,
+    "ratings": [
+      { "name": "1 star", "count": 6 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 50 },
+      { "name": "5 star", "count": 64 }
+    ]
+  },
+  {
+    "id": 8,
+    "image": "https://picsum.photos/seed/8/400/300",
+    "title": "Smart Watch",
+    "companyName": "TimeLink",
+    "description": "Water-resistant smartwatch with fitness tracking and heart monitor.",
+    "size": 1,
+    "reviews": 290,
+    "ratingAvg": 4.5,
+    "downloads": 7400,
+    "ratings": [
+      { "name": "1 star", "count": 8 },
+      { "name": "2 star", "count": 12 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 80 },
+      { "name": "5 star", "count": 165 }
+    ]
+  },
+  {
+    "id": 9,
+    "image": "https://picsum.photos/seed/9/400/300",
+    "title": "Bluetooth Speaker",
+    "companyName": "SoundWave",
+    "description": "Compact speaker with rich bass and 12-hour battery life.",
+    "size": 1,
+    "reviews": 370,
+    "ratingAvg": 4.6,
+    "downloads": 11200,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 14 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 90 },
+      { "name": "5 star", "count": 226 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "https://picsum.photos/seed/10/400/300",
+    "title": "Coffee Maker",
+    "companyName": "BrewMaster",
+    "description": "Programmable coffee machine with auto shut-off and timer.",
+    "size": 2,
+    "reviews": 160,
+    "ratingAvg": 4.2,
+    "downloads": 3400,
+    "ratings": [
+      { "name": "1 star", "count": 8 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 50 },
+      { "name": "5 star", "count": 57 }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "https://picsum.photos/seed/11/400/300",
+    "title": "Microwave Oven",
+    "companyName": "KitchenPro",
+    "description": "900W microwave oven with grill and defrost functions.",
+    "size": 3,
+    "reviews": 210,
+    "ratingAvg": 4.4,
+    "downloads": 4700,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 70 },
+      { "name": "5 star", "count": 100 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "https://picsum.photos/seed/12/400/300",
+    "title": "Table Lamp",
+    "companyName": "LightWorks",
+    "description": "LED table lamp with adjustable brightness and touch control.",
+    "size": 1,
+    "reviews": 95,
+    "ratingAvg": 4.1,
+    "downloads": 1800,
+    "ratings": [
+      { "name": "1 star", "count": 4 },
+      { "name": "2 star", "count": 6 },
+      { "name": "3 star", "count": 15 },
+      { "name": "4 star", "count": 30 },
+      { "name": "5 star", "count": 40 }
+    ]
+  },
+  {
+    "id": 13,
+    "image": "https://picsum.photos/seed/13/400/300",
+    "title": "Electric Kettle",
+    "companyName": "AquaHeat",
+    "description": "1.7L electric kettle with auto shut-off and stainless steel body.",
+    "size": 1,
+    "reviews": 180,
+    "ratingAvg": 4.3,
+    "downloads": 3200,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 8 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 60 },
+      { "name": "5 star", "count": 82 }
+    ]
+  },
+  {
+    "id": 14,
+    "image": "https://picsum.photos/seed/14/400/300",
+    "title": "Smart Thermostat",
+    "companyName": "EcoHome",
+    "description": "Smart thermostat with energy-saving mode and remote control.",
+    "size": 1,
+    "reviews": 250,
+    "ratingAvg": 4.5,
+    "downloads": 6700,
+    "ratings": [
+      { "name": "1 star", "count": 6 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 70 },
+      { "name": "5 star", "count": 144 }
+    ]
+  },
+  {
+    "id": 15,
+    "image": "https://picsum.photos/seed/15/400/300",
+    "title": "Robot Vacuum",
+    "companyName": "CleanBot",
+    "description": "Automatic vacuum cleaner with smart navigation and scheduling.",
+    "size": 3,
+    "reviews": 190,
+    "ratingAvg": 4.4,
+    "downloads": 5200,
+    "ratings": [
+      { "name": "1 star", "count": 8 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 60 },
+      { "name": "5 star", "count": 87 }
+    ]
+  },
+  {
+    "id": 16,
+    "image": "https://picsum.photos/seed/16/400/300",
+    "title": "Electric Toothbrush",
+    "companyName": "SmileCare",
+    "description": "Rechargeable toothbrush with 3 brushing modes and timer.",
+    "size": 1,
+    "reviews": 130,
+    "ratingAvg": 4.2,
+    "downloads": 2600,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 8 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 45 },
+      { "name": "5 star", "count": 52 }
+    ]
+  },
+  {
+    "id": 17,
+    "image": "https://picsum.photos/seed/17/400/300",
+    "title": "Portable Charger",
+    "companyName": "PowerBoost",
+    "description": "10,000mAh power bank with fast charging and dual USB ports.",
+    "size": 1,
+    "reviews": 210,
+    "ratingAvg": 4.4,
+    "downloads": 6800,
+    "ratings": [
+      { "name": "1 star", "count": 7 },
+      { "name": "2 star", "count": 12 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 65 },
+      { "name": "5 star", "count": 101 }
+    ]
+  },
+  {
+    "id": 18,
+    "image": "https://picsum.photos/seed/18/400/300",
+    "title": "Camera Drone",
+    "companyName": "SkySnap",
+    "description": "4K camera drone with GPS tracking and automatic return home.",
+    "size": 4,
+    "reviews": 300,
+    "ratingAvg": 4.6,
+    "downloads": 9400,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 80 },
+      { "name": "5 star", "count": 165 }
+    ]
+  },
+  {
+    "id": 19,
+    "image": "https://picsum.photos/seed/19/400/300",
+    "title": "Fitness Tracker",
+    "companyName": "FitPulse",
+    "description": "Tracks heart rate, steps, calories, and sleep quality.",
+    "size": 1,
+    "reviews": 270,
+    "ratingAvg": 4.5,
+    "downloads": 8100,
+    "ratings": [
+      { "name": "1 star", "count": 9 },
+      { "name": "2 star", "count": 11 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 70 },
+      { "name": "5 star", "count": 155 }
+    ]
+  },
+  {
+    "id": 20,
+    "image": "https://picsum.photos/seed/20/400/300",
+    "title": "Wireless Mouse",
+    "companyName": "ClickTech",
+    "description": "Ergonomic wireless mouse with silent clicks and USB receiver.",
+    "size": 1,
+    "reviews": 200,
+    "ratingAvg": 4.3,
+    "downloads": 5000,
+    "ratings": [
+      { "name": "1 star", "count": 6 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 70 },
+      { "name": "5 star", "count": 84 }
+    ]
+  },
+  {
+    "id": 21,
+    "image": "https://picsum.photos/seed/21/400/300",
+    "title": "Desk Organizer",
+    "companyName": "NeatDesk",
+    "description": "Multi-compartment desk organizer for office supplies.",
+    "size": 2,
+    "reviews": 90,
+    "ratingAvg": 4.0,
+    "downloads": 1600,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 7 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 30 },
+      { "name": "5 star", "count": 28 }
+    ]
+  },
+  {
+    "id": 22,
+    "image": "https://picsum.photos/seed/22/400/300",
+    "title": "Smart Doorbell",
+    "companyName": "SecureHome",
+    "description": "Video doorbell with motion detection and night vision.",
+    "size": 2,
+    "reviews": 160,
+    "ratingAvg": 4.3,
+    "downloads": 4200,
+    "ratings": [
+      { "name": "1 star", "count": 7 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 55 },
+      { "name": "5 star", "count": 68 }
+    ]
+  },
+  {
+    "id": 23,
+    "image": "https://picsum.photos/seed/23/400/300",
+    "title": "Laptop Stand",
+    "companyName": "ProMount",
+    "description": "Adjustable aluminum laptop stand for better posture.",
+    "size": 2,
+    "reviews": 140,
+    "ratingAvg": 4.4,
+    "downloads": 3900,
+    "ratings": [
+      { "name": "1 star", "count": 4 },
+      { "name": "2 star", "count": 6 },
+      { "name": "3 star", "count": 20 },
+      { "name": "4 star", "count": 50 },
+      { "name": "5 star", "count": 60 }
+    ]
+  },
+  {
+    "id": 24,
+    "image": "https://picsum.photos/seed/24/400/300",
+    "title": "Action Camera",
+    "companyName": "GoMotion",
+    "description": "Waterproof action camera with 4K video recording and WiFi.",
+    "size": 3,
+    "reviews": 240,
+    "ratingAvg": 4.5,
+    "downloads": 6300,
+    "ratings": [
+      { "name": "1 star", "count": 8 },
+      { "name": "2 star", "count": 12 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 70 },
+      { "name": "5 star", "count": 125 }
+    ]
+  },
+  {
+    "id": 25,
+    "image": "https://picsum.photos/seed/25/400/300",
+    "title": "Mechanical Keyboard",
+    "companyName": "KeyWorks",
+    "description": "RGB mechanical keyboard with blue switches and ergonomic layout.",
+    "size": 2,
+    "reviews": 310,
+    "ratingAvg": 4.6,
+    "downloads": 8500,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 15 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 80 },
+      { "name": "5 star", "count": 175 }
+    ]
+  },
+  {
+    "id": 26,
+    "image": "https://picsum.photos/seed/26/400/300",
+    "title": "Projector Mini",
+    "companyName": "VisionLite",
+    "description": "Portable mini projector for movies and presentations.",
+    "size": 3,
+    "reviews": 220,
+    "ratingAvg": 4.3,
+    "downloads": 4600,
+    "ratings": [
+      { "name": "1 star", "count": 6 },
+      { "name": "2 star", "count": 10 },
+      { "name": "3 star", "count": 30 },
+      { "name": "4 star", "count": 70 },
+      { "name": "5 star", "count": 104 }
+    ]
+  },
+  {
+    "id": 27,
+    "image": "https://picsum.photos/seed/27/400/300",
+    "title": "Smart Scale",
+    "companyName": "HealthMate",
+    "description": "Digital scale with Bluetooth and body composition analysis.",
+    "size": 1,
+    "reviews": 130,
+    "ratingAvg": 4.2,
+    "downloads": 2900,
+    "ratings": [
+      { "name": "1 star", "count": 5 },
+      { "name": "2 star", "count": 7 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 45 },
+      { "name": "5 star", "count": 48 }
+    ]
+  },
+  {
+    "id": 28,
+    "image": "https://picsum.photos/seed/28/400/300",
+    "title": "Noise Cancelling Earbuds",
+    "companyName": "AudioZen",
+    "description": "True wireless earbuds with ANC and wireless charging case.",
+    "size": 1,
+    "reviews": 480,
+    "ratingAvg": 4.7,
+    "downloads": 15600,
+    "ratings": [
+      { "name": "1 star", "count": 12 },
+      { "name": "2 star", "count": 18 },
+      { "name": "3 star", "count": 25 },
+      { "name": "4 star", "count": 90 },
+      { "name": "5 star", "count": 335 }
+    ]
+  }
+]
