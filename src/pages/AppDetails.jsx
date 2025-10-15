@@ -1,109 +1,93 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import toast from 'react-hot-toast';
 
-// Utility to get installed apps from localStorage
 const getInstalledApps = () => {
     const installed = localStorage.getItem('installed-apps');
     return installed ? JSON.parse(installed) : [];
 };
 
-// Utility to save an app to localStorage
-const saveInstalledApp = (id) => {
-    const installed = getInstalledApps();
-    if (!installed.includes(id)) {
-        installed.push(id);
-        localStorage.setItem('installed-apps', JSON.stringify(installed));
-    }
-};
-
-
 const AppDetails = () => {
-    const allApps = useLoaderData();
+    const allAppsData = useLoaderData();
     const { id } = useParams();
+    const numericId = parseInt(id, 10);
+    const app = allAppsData.find(app => app.id === numericId);
     const [isInstalled, setIsInstalled] = useState(false);
-    
-    const app = allApps.find(app => app.id === parseInt(id));
-
     useEffect(() => {
-        const installedApps = getInstalledApps();
-        if (installedApps.includes(parseInt(id))) {
-            setIsInstalled(true);
-        }
-    }, [id]);
-
+        const installedIds = getInstalledApps();
+        setIsInstalled(installedIds.includes(numericId));
+    }, [numericId]);
     const handleInstall = () => {
-        saveInstalledApp(parseInt(id));
+        const installedIds = getInstalledApps();
+        if (installedIds.includes(numericId)) return;
+
+        const updatedInstalledIds = [...installedIds, numericId];
+        localStorage.setItem('installed-apps', JSON.stringify(updatedInstalledIds));
         setIsInstalled(true);
-        toast.success(`${app.name} has been installed!`);
+        toast.success(`${app.title} has been installed successfully!`);
     };
 
     if (!app) {
         return (
             <div className="text-center py-20">
-                <h2 className="text-3xl font-bold">App Not Found</h2>
-                <p className="text-gray-500 mt-4">Sorry, we couldn't find the app you're looking for.</p>
+                <h1 className="text-3xl font-bold text-gray-700">App Not Found</h1>
+                <p className="text-gray-500 mt-2">The app you are looking for does not exist.</p>
             </div>
-        )
+        );
     }
 
-    const { name, image, downloads, rating, reviews, description, review_data } = app;
+    const { title, image, rating, downloads, reviews, description, review_data } = app;
 
     return (
-        <div className="container mx-auto px-4 py-12">
-            {/* App Information Section */}
-            <div className="flex flex-col md:flex-row gap-12 mb-16">
-                <div className="md:w-1/3">
-                    <img src={image} alt={name} className="w-full h-auto rounded-2xl shadow-lg" />
-                </div>
-                <div className="md:w-2/3">
-                    <h1 className="text-4xl font-bold mb-4">{name}</h1>
-                    <div className="flex items-center gap-6 text-lg mb-6">
-                        <span className="font-semibold">⭐ {rating} ({reviews} reviews)</span>
-                        <span className="font-semibold">{downloads} Downloads</span>
+        <div className="bg-gray-50 min-h-screen">
+            <div className="container mx-auto px-4 py-12">
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-12 flex items-center">
+                    <img src={image} alt={title} className="w-32 h-32 rounded-3xl object-cover flex-shrink-0" />
+                    <div className="flex-grow mx-8">
+                        <h1 className="text-4xl font-bold text-gray-800">{title}</h1>
+                        <div className="flex items-center space-x-4 text-gray-500 mt-2">
+                            <span>⭐ {rating}</span>
+                            <span className="text-gray-300">&bull;</span>
+                            <span>{downloads.toLocaleString()} Downloads</span>
+                            <span className="text-gray-300">&bull;</span>
+                            <span>{reviews.toLocaleString()} Reviews</span>
+                        </div>
                     </div>
-                    <p className="text-gray-600 leading-relaxed mb-8">{description}</p>
-                    <button 
+                    <button
                         onClick={handleInstall}
                         disabled={isInstalled}
-                        className="btn btn-primary btn-wide disabled:btn-success"
+                        className="flex-shrink-0 py-3 px-8 rounded-lg font-semibold text-white transition-all duration-300 disabled:bg-green-500 disabled:cursor-not-allowed bg-blue-600 hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
                     >
-                        {isInstalled ? 'Installed' : 'Install'}
+                        {isInstalled ? '✓ Installed' : 'Install'}
                     </button>
                 </div>
-            </div>
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                    <div className="lg:col-span-3 bg-white p-6 rounded-2xl shadow-lg">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-4">Review Snapshot</h2>
+                        <div style={{ width: '100%', height: 300 }}>
+                            <ResponsiveContainer>
+                                <LineChart data={review_data}>
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="month" />
+                                    <YAxis />
+                                    <Tooltip />
+                                    <Legend />
+                                    <Line type="monotone" dataKey="reviews" name="Monthly Reviews" stroke="#8884d8" strokeWidth={2} activeDot={{ r: 8 }} />
+                                </LineChart>
+                            </ResponsiveContainer>
+                        </div>
+                    </div>
 
-            {/* App Review Chart */}
-            <div className="mb-16">
-                <h2 className="text-3xl font-bold text-center mb-8">Review Analysis</h2>
-                <div style={{ width: '100%', height: 400 }}>
-                    <ResponsiveContainer>
-                        <BarChart
-                            data={review_data}
-                            margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                        >
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="name" />
-                            <YAxis />
-                            <Tooltip />
-                            <Legend />
-                            <Bar dataKey="reviews" fill="#8884d8" />
-                        </BarChart>
-                    </ResponsiveContainer>
+                    <div className="lg:col-span-2 bg-white p-6 rounded-2xl shadow-lg">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-4">Description</h2>
+                        <p className="text-gray-600 leading-relaxed">{description}</p>
+                    </div>
                 </div>
-            </div>
-
-             {/* App Description */}
-            <div>
-                 <h2 className="text-3xl font-bold mb-4">Full Description</h2>
-                 <div className="prose max-w-none">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.</p>
-                     <p>Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.</p>
-                 </div>
             </div>
         </div>
     );
 };
 
 export default AppDetails;
+
